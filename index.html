@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Similarity App</title>
+</head>
+<body>
+    <h1>Text Similarity App</h1>
+    <form action="/predict" method="post">
+        <label for="text1">Text 1:</label>
+        <input type="text" id="text1" name="text1" required><br><br>
+
+        <label for="text2">Text 2:</label>
+        <input type="text" id="text2" name="text2" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if similarity_score %}
+    <h2>similarity Score: {{ similarity_score }}</h2>
+    {% endif %}
+</body>
+</html>
